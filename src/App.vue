@@ -1,12 +1,14 @@
 <script setup>
 import Header from './components/Header.vue'
 import Banner from './components/Banner.vue'
+import SmallerBanners from './components/SmallerBanners.vue'
 </script>
 
 <template>
   <div class="app-container">
     <Header />
     <Banner />
+    <SmallerBanners />
     <footer class="footer">Footer</footer>
   </div>
 </template>

@@ -35,6 +35,7 @@ const handleShopNow = () => {
   width: 100%;
   position: relative;
   z-index: 2;
+  padding-top: 80px;
 }
 
 .banner {
@@ -58,6 +59,7 @@ const handleShopNow = () => {
   margin-bottom: 16px;
   font-family: 'ABeeZee', sans-serif;
   font-style: italic;
+  letter-spacing: 0.5px;
 }
 
 .iphone {
@@ -79,6 +81,7 @@ const handleShopNow = () => {
   line-height: 24px;
   margin-bottom: 40px;
   max-width: 600px;
+  letter-spacing: 0.5px;
 }
 
 .button-show {
@@ -95,6 +98,7 @@ const handleShopNow = () => {
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 2;
+  letter-spacing: 0.5px;
 }
 
 .button-show:hover {
@@ -123,6 +127,7 @@ const handleShopNow = () => {
   right: -5%;
   top: 50%;
   transform: translateY(-50%);
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.3));
 }
 
 /* Анимации */
