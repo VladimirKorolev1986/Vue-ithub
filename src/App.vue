@@ -2,6 +2,7 @@
 import Header from './components/Header.vue'
 import Banner from './components/Banner.vue'
 import SmallerBanners from './components/SmallerBanners.vue'
+import BrowseCategories from './components/BrowseCategories.vue'
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import SmallerBanners from './components/SmallerBanners.vue'
     <Header />
     <Banner />
     <SmallerBanners />
+    <BrowseCategories />
     <footer class="footer">Footer</footer>
   </div>
 </template>
