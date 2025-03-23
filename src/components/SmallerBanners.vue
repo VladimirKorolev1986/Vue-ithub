@@ -35,7 +35,21 @@
           </div>
         </div>
       </div>
-      <div class="big-banner">3</div>
+      <div class="big-banner">
+        <div class="content">
+          <div class="title">
+            <p class="title-text">Macbook <span class="title-text-air">Air</span></p>
+            <p class="title-description">
+              The new 15‑inch MacBook Air makes room for more of what you love with a spacious
+              Liquid Retina display.
+            </p>
+            <button class="button">Shop Now</button>
+          </div>
+        </div>
+        <div class="image">
+          <img src="/MacBookPro14.png" alt="MacBookPro14" />
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -101,9 +115,9 @@
   padding: 0 40px;
 }
 .playstation-title {
-  color: black;
+  color: var(--main-black);
   font-size: 49px;
-  font-family: 'ABeeZee', sans-serif;
+  font-family: var(--font-family);
   font-style: italic;
   font-weight: 400;
   line-height: 40px;
@@ -112,7 +126,7 @@
 .playstation-description {
   color: #909090;
   font-size: 14px;
-  font-family: 'ABeeZee', sans-serif;
+  font-family: var(--font-family);
   font-style: italic;
   font-weight: 400;
   line-height: 24px;
@@ -120,29 +134,78 @@
   max-width: 324px;
 }
 .earsphone-title {
-  color: black;
+  color: var(--main-black);
   font-size: 29px;
-  font-family: 'ABeeZee', sans-serif;
+  font-family: var(--font-family);
   font-style: italic;
 }
 .earsphone-description {
   color: #909090;
   font-size: 14px;
-  font-family: 'ABeeZee', sans-serif;
+  font-family: var(--font-family);
   font-style: italic;
   font-weight: 400;
   line-height: 24px;
 }
 .vision-title {
-  color: white;
+  color: var(--main-white);
   font-size: 29px;
-  font-family: 'ABeeZee', sans-serif;
+  font-family: var(--font-family);
   font-style: italic;
 }
 .vision-description {
-  color: #909090;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
-  font-family: 'ABeeZee', sans-serif;
+  font-family: var(--font-family);
   font-style: italic;
+}
+.big-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ededed;
+  padding-left: 56px;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 360px;
+  height: 120px;
+}
+.title-text {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 87%;
+  color: var(--main-black);
+}
+.title-text-air {
+  font-family: var(--font-family);
+  font-style: italic;
+  font-weight: 400;
+}
+.title-description {
+  font-family: var(--font-family);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  color: #909090;
+}
+.button {
+  border: 1px solid var(--main-black);
+  border-radius: 6px;
+  padding: 16px 56px;
+  width: 188px;
+  height: 56px;
+  font-family: var(--font-family);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--main-black);
 }
 </style>

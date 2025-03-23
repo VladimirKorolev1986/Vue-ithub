@@ -1,1 +1,11 @@
 @import 'tailwindcss';
+:root {
+  --main-black: #000;
+  --main-white: #fff;
+  --secondary-charcoal: #2e2e2e;
+}
+:root {
+  --font-family: 'ABeeZee', sans-serif;
+  --second-family: 'Abel', sans-serif;
+  --third-family: '?????', sans-serif;
+}
