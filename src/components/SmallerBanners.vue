@@ -13,8 +13,26 @@
           </div>
         </div>
         <div class="squares">
-          <div class="square1">4</div>
-          <div class="square">5</div>
+          <div class="square1">
+            <img src="/hero.png" alt="наушники" />
+            <div class="playstation-text">
+              <p class="earsphone-title">Apple</p>
+              <p class="earsphone-title">AirPods</p>
+              <p class="earsphone-title">Max</p>
+              <p class="earsphone-description">Computational audio.</p>
+              <p class="earsphone-description">Listen, it's powerful</p>
+            </div>
+          </div>
+          <div class="square">
+            <img src="/image36.png" alt="Очки VR" />
+            <div class="playstation-text">
+              <p class="vision-title">Apple</p>
+              <p class="vision-title">Vision Pro</p>
+              <p class="vision-description">An immersive way to</p>
+              <p class="vision-description">experience</p>
+              <p class="vision-description">entertainment</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="big-banner">3</div>
@@ -29,7 +47,6 @@
 .big-banner {
   width: 50%;
   height: 100%;
-  background-color: gray; /* временно, чтобы видеть блок */
 }
 .banner-container {
   display: flex;
@@ -55,14 +72,18 @@
   background-color: blue;
 }
 .square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   height: 100%;
-  background-color: green;
+  background-color: #353535;
 }
 .square1 {
+  display: flex;
   width: 50%;
   height: 100%;
-  background-color: rgb(101, 6, 87);
+  background-color: #ededed;
 }
 .square2 {
   width: 50%;
@@ -70,17 +91,58 @@
   background-color: yellow;
 }
 .playstation-text {
-  display: flex;
+  width: 100%;
+  max-width: 404px;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
+  gap: 16px;
+  display: inline-flex;
+  padding: 0 40px;
 }
 .playstation-title {
+  color: black;
   font-size: 49px;
-  font-family: ABeeZee;
+  font-family: 'ABeeZee', sans-serif;
   font-style: italic;
   font-weight: 400;
-  word-wrap: break-word;
-  color: #000;
+  line-height: 40px;
+  letter-spacing: -1px;
+}
+.playstation-description {
+  color: #909090;
+  font-size: 14px;
+  font-family: 'ABeeZee', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  max-width: 324px;
+}
+.earsphone-title {
+  color: black;
+  font-size: 29px;
+  font-family: 'ABeeZee', sans-serif;
+  font-style: italic;
+}
+.earsphone-description {
+  color: #909090;
+  font-size: 14px;
+  font-family: 'ABeeZee', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px;
+}
+.vision-title {
+  color: white;
+  font-size: 29px;
+  font-family: 'ABeeZee', sans-serif;
+  font-style: italic;
+}
+.vision-description {
+  color: #909090;
+  font-size: 14px;
+  font-family: 'ABeeZee', sans-serif;
+  font-style: italic;
 }
 </style>
