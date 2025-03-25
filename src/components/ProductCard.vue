@@ -48,6 +48,7 @@
   line-height: 150%;
   text-align: center;
   color: var(--main-black);
+  margin-bottom: 16px;
 }
 .price-container {
   font-family: var(--second-family);
@@ -57,6 +58,7 @@
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--main-black);
+  margin-bottom: 24px;
 }
 button {
   border-radius: 8px;
@@ -71,5 +73,10 @@ button {
   line-height: 171%;
   text-align: center;
   color: var(--main-white);
+}
+.text-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
