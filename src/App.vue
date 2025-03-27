@@ -4,6 +4,7 @@ import Banner from './components/Banner.vue'
 import SmallerBanners from './components/SmallerBanners.vue'
 import BrowseCategories from './components/BrowseCategories.vue'
 import Products from './components/Products.vue'
+import Banners from './components/Banners.vue'
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import Products from './components/Products.vue'
     <SmallerBanners />
     <BrowseCategories />
     <Products />
+    <Banners />
     <footer class="footer">Footer</footer>
   </div>
 </template>

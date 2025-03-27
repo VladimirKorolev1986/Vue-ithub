@@ -73,7 +73,16 @@ button {
   line-height: 171%;
   text-align: center;
   color: var(--main-white);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+button:active {
+  background: var(--main-white);
+  color: var(--main-black);
+}
+
 .text-icon-container {
   display: flex;
   flex-direction: column;
