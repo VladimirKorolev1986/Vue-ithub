@@ -7,6 +7,7 @@ import Products from './components/Products.vue'
 import Banners from './components/Banners.vue'
 import DiscountProducts from './components/DiscountProducts.vue'
 import Banner2 from './components/Banner2.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
@@ -19,7 +20,7 @@ import Banner2 from './components/Banner2.vue'
     <Banners />
     <DiscountProducts />
     <Banner2 />
-    <footer class="footer">Footer</footer>
+    <Footer />
   </div>
 </template>
 

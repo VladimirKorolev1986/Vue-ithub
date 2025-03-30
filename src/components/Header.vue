@@ -1,8 +1,6 @@
 <template>
   <header class="header-container">
-    <div>
-      <img src="/Logo.svg" alt="Лого" class="logo" />
-    </div>
+    <Logo />
 
     <InputField placeholder="Введите запрос..." />
 
@@ -13,6 +11,7 @@
 <script setup>
 import InputField from './InputField.vue'
 import Icons from './Icons.vue'
+import Logo from './Logo.vue'
 </script>
 
 <style scoped>
@@ -21,12 +20,9 @@ import Icons from './Icons.vue'
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px;
+  padding-left: 160px;
+  padding-right: 160px;
   background: white;
   border-bottom: 1px solid #ddd;
-}
-
-.logo {
-  height: 40px;
 }
 </style>
