@@ -43,7 +43,7 @@
               The new 15‑inch MacBook Air makes room for more of what you love with a spacious
               Liquid Retina display.
             </p>
-            <button class="button">Shop Now</button>
+            <Button borderColor="var(--main-black)" textColor="var(--main-black)"></Button>
           </div>
         </div>
         <div class="image">
@@ -194,18 +194,8 @@
   line-height: 171%;
   color: #909090;
 }
-.button {
-  border: 1px solid var(--main-black);
-  border-radius: 6px;
-  padding: 16px 56px;
-  width: 188px;
-  height: 56px;
-  font-family: var(--font-family);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  text-align: center;
-  color: var(--main-black);
-}
 </style>
+
+<script setup>
+import Button from './Button.vue'
+</script>

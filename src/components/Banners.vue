@@ -41,7 +41,7 @@
           iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking
           and ease of use.
         </p>
-        <button class="banner-button">Shop Now</button>
+        <button class="banner-button color-white border-white">Shop Now</button>
       </div>
     </div>
   </div>
@@ -97,7 +97,13 @@
   padding: 16px 56px;
   width: 188px;
   height: 56px;
+  color: var(--main-black);
+  cursor: pointer;
 }
+.border-white {
+  border: 1px solid var(--main-white);
+}
+
 .color-white {
   color: var(--main-white);
 }
