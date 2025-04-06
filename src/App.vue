@@ -1,4 +1,7 @@
 <script setup>
+import { onMounted } from 'vue'
+import axios from 'axios'
+
 import Header from './components/Header.vue'
 import Banner from './components/Banner.vue'
 import SmallerBanners from './components/SmallerBanners.vue'
@@ -8,6 +11,16 @@ import Banners from './components/Banners.vue'
 import DiscountProducts from './components/DiscountProducts.vue'
 import Banner2 from './components/Banner2.vue'
 import Footer from './components/Footer.vue'
+
+onMounted(async () => {
+  try {
+    const { data } = await axios.get('http://localhost:1452/api/products/1')
+
+    console.log(data)
+  } catch (e) {
+    console.log(e)
+  }
+})
 </script>
 
 <template>
