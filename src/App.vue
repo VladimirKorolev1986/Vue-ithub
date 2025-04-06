@@ -3,13 +3,7 @@ import { onMounted } from 'vue'
 import axios from 'axios'
 
 import Header from './components/Header.vue'
-import Banner from './components/Banner.vue'
-import SmallerBanners from './components/SmallerBanners.vue'
-import BrowseCategories from './components/BrowseCategories.vue'
-import Products from './components/Products.vue'
-import Banners from './components/Banners.vue'
-import DiscountProducts from './components/DiscountProducts.vue'
-import Banner2 from './components/Banner2.vue'
+
 import Footer from './components/Footer.vue'
 
 onMounted(async () => {
@@ -26,13 +20,7 @@ onMounted(async () => {
 <template>
   <div class="app-container">
     <Header />
-    <Banner />
-    <SmallerBanners />
-    <BrowseCategories />
-    <Products />
-    <Banners />
-    <DiscountProducts />
-    <Banner2 />
+    <router-view />
     <Footer />
   </div>
 </template>
