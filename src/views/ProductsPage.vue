@@ -1,6 +1,7 @@
 <script setup>
+import ProductCard from '@/components/ProductCard.vue'
 import FilterBlock from '../components/FilterBlock.vue'
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const brands = ['Apple', 'Samsung', 'Xiaomi', 'Realme']
 const capacities = ['3000 mAh', '4000 mAh', '5000 mAh']
@@ -13,6 +14,23 @@ const selectedScreens = ref([])
 const selectedDiagonal = ref([])
 const selectedProtection = ref([])
 const selectedbuiltInMemory = ref([])
+
+const currentPage = ref(1)
+const itemsPerPage = 9
+
+const products = ref(
+  Array.from({ length: 10 }, (_, i) => ({
+    id: i + 1,
+    title: `Product ${i + 1}`,
+  })),
+)
+
+const paginatedProducts = computed(() => {
+  const start = (currentPage.value - 1) * itemsPerPage
+  return products.value.slice(start, start + itemsPerPage)
+})
+
+const totalPages = computed(() => Math.ceil(products.value.length / itemsPerPage))
 </script>
 <template>
   <div class="products-page">
@@ -47,7 +65,21 @@ const selectedbuiltInMemory = ref([])
           </select>
         </div>
       </div>
-      <div></div>
+      <div class="product-grid">
+        <ProductCard v-for="product in paginatedProducts" :key="product.id" :product="product" />
+      </div>
+      <div class="pagination">
+        <button @click="currentPage--" :disabled="currentPage === 1">Prev</button>
+        <button
+          v-for="page in totalPages"
+          :key="page"
+          @click="currentPage = page"
+          :class="{ active: currentPage === page }"
+        >
+          {{ page }}
+        </button>
+        <button @click="currentPage++" :disabled="currentPage === totalPages">Next</button>
+      </div>
     </div>
   </div>
 </template>
@@ -113,5 +145,34 @@ option {
   line-height: 107%;
   letter-spacing: -0.01em;
   color: var(--main-black);
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  font-weight: bold;
+  background: #000;
+  color: white;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 </style>
