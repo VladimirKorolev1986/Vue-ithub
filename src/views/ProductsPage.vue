@@ -1,7 +1,9 @@
 <script setup>
+import { ref, computed, onMounted } from 'vue'
+import axios from 'axios'
+
 import ProductCard from '@/components/ProductCard.vue'
 import FilterBlock from '../components/FilterBlock.vue'
-import { ref, computed } from 'vue'
 
 const brands = ['Apple', 'Samsung', 'Xiaomi', 'Realme']
 const capacities = ['3000 mAh', '4000 mAh', '5000 mAh']
@@ -14,16 +16,26 @@ const selectedScreens = ref([])
 const selectedDiagonal = ref([])
 const selectedProtection = ref([])
 const selectedbuiltInMemory = ref([])
+const products = ref([])
 
 const currentPage = ref(1)
 const itemsPerPage = 9
-
-const products = ref(
-  Array.from({ length: 10 }, (_, i) => ({
-    id: i + 1,
-    title: `Product ${i + 1}`,
-  })),
-)
+onMounted(async () => {
+  try {
+    const { data } = await axios.get('http://localhost:1452/api/products')
+    products.value = data
+    console.log(data)
+  } catch (e) {
+    console.log(e)
+  }
+})
+//TODO прокинуть данные пропсов в компонент
+// const products = ref(
+//   Array.from({ length: 10 }, (_, i) => ({
+//     id: i + 1,
+//     title: `Product ${i + 1}`,
+//   })),
+// )
 
 const paginatedProducts = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage

@@ -1,4 +1,5 @@
 <template>
+  //TODO переписать через пропсы, использовав данные из массива
   <div class="product-card">
     <div class="top-section">
       <img src="/Icon/Like.svg" alt="Product Image" />
