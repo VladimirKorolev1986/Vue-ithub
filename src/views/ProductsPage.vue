@@ -34,7 +34,9 @@ const paginatedProducts = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage
   return products.value.slice(start, start + itemsPerPage)
 })
+console.log(paginatedProducts)
 
+const count = computed(() => selectedBrands.value.length)
 const totalPages = computed(() => Math.ceil(products.value.length / itemsPerPage))
 </script>
 <template>
@@ -74,7 +76,7 @@ const totalPages = computed(() => Math.ceil(products.value.length / itemsPerPage
         <ProductCard
           v-for="product in paginatedProducts"
           :key="product.id"
-          :image="product.images[0]"
+          :image="`http://localhost:1452/${product.images[0]}`"
           :title="product.name"
           :price="product.price"
         />

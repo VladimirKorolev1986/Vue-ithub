@@ -21,7 +21,7 @@ defineProps({
       <img src="/Icon/Like.svg" alt="Product Image" />
     </div>
     <div class="image-container">
-      <img :src="image" alt="Product Image" />
+      <img class="product-image" :src="image" alt="Product Image" />
     </div>
     <div class="text-icon-container">
       <div class="text-container">
@@ -102,5 +102,8 @@ button:active {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.product-image {
+  background-color: #f6f6f6;
 }
 </style>
