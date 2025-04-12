@@ -22,20 +22,13 @@ const currentPage = ref(1)
 const itemsPerPage = 9
 onMounted(async () => {
   try {
-    const { data } = await axios.get('http://localhost:1452/api/products')
+    const { data } = await axios.get('http://localhost:1452/api/products/')
     products.value = data
     console.log(data)
   } catch (e) {
     console.log(e)
   }
 })
-//TODO прокинуть данные пропсов в компонент
-// const products = ref(
-//   Array.from({ length: 10 }, (_, i) => ({
-//     id: i + 1,
-//     title: `Product ${i + 1}`,
-//   })),
-// )
 
 const paginatedProducts = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage
@@ -78,7 +71,13 @@ const totalPages = computed(() => Math.ceil(products.value.length / itemsPerPage
         </div>
       </div>
       <div class="product-grid">
-        <ProductCard v-for="product in paginatedProducts" :key="product.id" :product="product" />
+        <ProductCard
+          v-for="product in paginatedProducts"
+          :key="product.id"
+          :image="product.images[0]"
+          :title="product.name"
+          :price="product.price"
+        />
       </div>
       <div class="pagination">
         <button @click="currentPage--" :disabled="currentPage === 1">Prev</button>
@@ -102,6 +101,7 @@ const totalPages = computed(() => Math.ceil(products.value.length / itemsPerPage
   gap: 32px;
   background-color: var(--main-white);
   padding: 24px 160px 56px 160px;
+  min-height: 1560px;
 }
 
 .filters {

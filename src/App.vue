@@ -1,20 +1,7 @@
 <script setup>
-import { onMounted } from 'vue'
-import axios from 'axios'
-
 import Header from './components/Header.vue'
 
 import Footer from './components/Footer.vue'
-
-onMounted(async () => {
-  try {
-    const { data } = await axios.get('http://localhost:1452/api/products/1')
-
-    console.log(data)
-  } catch (e) {
-    console.log(e)
-  }
-})
 </script>
 
 <template>

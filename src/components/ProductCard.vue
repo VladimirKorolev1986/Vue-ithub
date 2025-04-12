@@ -1,25 +1,39 @@
+<script setup>
+defineProps({
+  image: {
+    type: String,
+    required: true,
+  },
+  title: {
+    type: String,
+    required: true,
+  },
+  price: {
+    type: [String, Number],
+    required: true,
+  },
+})
+</script>
+
 <template>
-  //TODO переписать через пропсы, использовав данные из массива
   <div class="product-card">
     <div class="top-section">
       <img src="/Icon/Like.svg" alt="Product Image" />
     </div>
     <div class="image-container">
-      <img src="/Iphone14pro1.png" alt="Product Image" />
+      <img :src="image" alt="Product Image" />
     </div>
     <div class="text-icon-container">
       <div class="text-container">
-        <p>Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)</p>
+        <p>{{ title }}</p>
       </div>
       <div class="price-container">
-        <p>$900</p>
+        <p>{{ price }}</p>
       </div>
       <button>Buy Now</button>
     </div>
   </div>
 </template>
-
-<script setup></script>
 
 <style scoped>
 .product-card {
