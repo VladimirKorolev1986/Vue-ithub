@@ -28,7 +28,7 @@ defineProps({
         <p>{{ title }}</p>
       </div>
       <div class="price-container">
-        <p>{{ price }}</p>
+        <p>${{ price }}</p>
       </div>
       <button>Buy Now</button>
     </div>
@@ -104,6 +104,8 @@ button:active {
   align-items: center;
 }
 .product-image {
-  background-color: #f6f6f6;
+  width: 160px;
+  height: 160px;
+  background-color: transparent;
 }
 </style>
