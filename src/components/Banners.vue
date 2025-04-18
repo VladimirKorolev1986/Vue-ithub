@@ -99,6 +99,13 @@
   height: 56px;
   color: var(--main-black);
   cursor: pointer;
+  font-family: var(--font-family);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--main-black);
 }
 .border-white {
   border: 1px solid var(--main-white);

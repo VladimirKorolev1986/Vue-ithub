@@ -2,10 +2,22 @@
   <div class="discount-products">
     <h2 class="discount-products-title">Discounts up to -50%</h2>
     <div class="discount-products-list">
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
+      <ProductCard
+        image="Iphone14pro1Gold.png"
+        title="Apple iPhone 14 Pro 512GB Gold (MQ233)"
+        price="1437"
+      />
+      <ProductCard image="AirPods.png" title="AirPods Max Silver" price="549" />
+      <ProductCard
+        image="AppleWatch.png"
+        title="Apple Watch Series 9 GPS 41mm Starlight Aluminium Case"
+        price="399"
+      />
+      <ProductCard
+        image="Iphone14pro1White.png"
+        title="Apple iPhone 14 Pro 1TB Gold (MQ2V3)"
+        price="1499"
+      />
     </div>
   </div>
 </template>
